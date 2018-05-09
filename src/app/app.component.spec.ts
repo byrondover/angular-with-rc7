@@ -1,11 +1,17 @@
 import { TestBed, async } from '@angular/core/testing';
+import { AngularFirestore } from 'angularfire2/firestore';
+
 import { AppComponent } from './app.component';
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent
       ],
+      providers: [
+        { provide: AngularFirestore, useValue: null }
+      ]
     }).compileComponents();
   }));
   it('should create the app', async(() => {
